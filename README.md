@@ -27,7 +27,7 @@ Welcome to **Kitten Chaos**, a web-based card game adventure! Dive into a world 
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/your-username/exploding-kitten.git
+   https://github.com/nigdifg/Kitten-Chaos-frontend.git
 ## Technology Stack
 ### Frontend:
 - React.js
