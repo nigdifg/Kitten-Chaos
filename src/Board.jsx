@@ -166,50 +166,51 @@ const handleCardShow = () => {
     <Navbar/>
     {
         gameWon ? (
-            <div>
-                <h1>You Won</h1>
-                <button onClick={ restartGame } >Restart</button>
+            <div className="flex flex-col items-center justify-center h-screen">
+                <h1 className="text-4xl font-bold mb-4">You Won</h1>
+                <button onClick={restartGame} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Restart</button>
             </div>
         ) : (
+            gameOver ? (
+                <div className="flex flex-col items-center justify-center h-screen">
+                    <h1 className="text-4xl font-bold mb-4">Game Over</h1>
+                    <button onClick={restartGame} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Restart</button>
+                </div>
+            ) : (
+                <div className='flex lg:flex-row bg-gray-100 min-h-screen pt-10 pb-20 px-0 md:px-0'>
+                    <div className="container mx-auto">
+                        <div className='card-cont flex flex-wrap justify-center mb-12'>
+                            {
+                                deck && deck.map((card, ind) => (
+                                    <div key={ind} className={`card card-${ind+1} bg-indigo-100 hover:bg-indigo-400 hover:ease-in-out-0.5s shadow-md rounded-lg p-6 m-2 w-full md:w-1/2 lg:w-1/4`}>card {ind} </div>
+                                ))
+                            }
+                        </div>
 
-        gameOver ? (
-            <div>
-                <h1>Game Over</h1>
-                <button onClick={ restartGame } >Restart</button>
-            </div>
-        ) : (
-        <div className='board' >
-        
-        <div className="container">
-            <div className='card-cont' >
-                {
-                deck && deck.map((card, ind) => (
-                    <div key={ind} className={`card card-${ind+1}`} >card {ind} </div>
-                ))
-                }
-            </div>
+                        {
+                            currentCard && (
+                                <div className='card active-card bg-indigo-400 shadow-md rounded-lg p-6 m-2 w-full md:w-1/2 lg:w-1/4 mx-auto'> 
+                                    {currentCard.cardName}
+                                </div>
+                            )
+                        }
 
-            {
-                currentCard && (
-                    <div className='card active-card'> 
-                    {
-                    currentCard.cardName
-                    }
+                        { !cardIsShowing && <button className='show-btn bg-indigo-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-auto mt-4' onClick={handleCardShow}>show card</button>} 
+                        {
+                            explodeAction && <button onClick={handleExplodingKitten} className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mx-auto mt-4">useDiffuse</button>
+                        }
+                        <h2 className="text-center mt-4">Diffuse Cards Available {' '} {diffuseCardCount}</h2>
+                       
                     </div>
-                )
-            }
+                    <div className='flex flex-auto '>
+                    <Highscore highscore={highscore} />
 
-            { !cardIsShowing && <button className='show-btn' onClick={handleCardShow} >show card</button>} 
-            {
-                explodeAction && <button onClick={handleExplodingKitten} >useDiffuse</button>
-            }
-            <h2>Diffuse Cards Available - {diffuseCardCount}</h2>
-        </div>
+                    </div>
 
-                <Highscore highscore={highscore} />
-
-            </div>
-        )
+                </div>
+            )
+        
+        
       )
     }
 

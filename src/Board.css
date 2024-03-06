@@ -1,15 +1,9 @@
 /* Board.css */
-.board {
-    display: flex;
-    height: 100vh;
-    background-color: #010317;
-}
 
 .container {
-    width: 70%;
+    width: 80%;
     display: flex;
     flex-direction: column;
-    align-items: center;
     margin-top: 8vh;
 }
 
@@ -20,16 +14,16 @@
 }
 
 .card {
-    width: 130px;
-    height: 170px;
+    width: 100px;
+    height: 150px;
     background-color: #e7dddd;
     border: 1px solid #000;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
-    margin-right: 1rem;
+    margin-right: 0.1rem;
 }
 
 .show-btn {
@@ -58,7 +52,7 @@ h2 {
     margin-top: 2rem;
     font-size: 24px;
     font-weight: bold;
-    color: white
+    color: gray
 }
 
 .card {
