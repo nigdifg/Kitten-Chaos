@@ -1,5 +1,5 @@
 import React from 'react'
-import "./componentsStyle.css"
+// import "./componentsStyle.css"
 
 function Highscore({highscore}) {
 
