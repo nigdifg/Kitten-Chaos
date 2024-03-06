@@ -64,7 +64,7 @@ function Navbar() {
           </a>
         </div>
         <div>
-          <button onClick={handleLogout} className="inline-block px-4 py-2 leading-none border rounded text-black text-xl border-white hover:border-transparent hover:text-indigo-500 hover:bg-white mt-4 lg:mt-0">Logout</button>
+          <button onClick={handleLogout} className="inline-block px-4 py-2 leading-none border rounded text-black text-xl border-indigo-500 hover:border-transparent hover:text-indigo-500 hover:bg-white mt-4 lg:mt-0">Logout</button>
         </div>
       </div>
       <Modal

@@ -4,6 +4,12 @@
 
 Welcome to **Kitten Chaos**, a web-based card game adventure! Dive into a world filled with mischievous cats, defuse cards, and explosive surprises. Your mission? Draw cards strategically, avoid exploding kittens, and climb to the top of the leaderboard!
 
+![Alt text](./src/assets/card.png)
+![Gameplay screenshot](./src/assets/card1.png)
+![Gameplay screenshot](./src/assets/card2.png)
+![Gameplay screenshot](./src/assets/card3.png)
+
+
 ## Game Rules
 
 - **Cat Card 😼:** Drawing a cat card removes it from the deck.
