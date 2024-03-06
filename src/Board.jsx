@@ -22,10 +22,10 @@ function Board() {
 
     const initializeDeck = () => {
         const cards = [
-          { cardName: 'Cat card', cardTitle: 'Cat Card' },
-          { cardName: 'Defuse card', cardTitle: 'Defuse ' },
-          { cardName: 'Shuffle card', cardTitle: 'Shuffle card ' },
-          { cardName: 'Exploding card', cardTitle: 'Exploding card ' },
+          { cardName: 'Cat card', cardTitle: 'Cat Card',cardImage: '😼' },
+          { cardName: 'Defuse card', cardTitle: 'Defuse ', cardImage: '🙅‍♂️' },
+          { cardName: 'Shuffle card', cardTitle: 'Shuffle card ', cardImage: '🔀' },
+          { cardName: 'Exploding card', cardTitle: 'Exploding card ', cardImage: '💣'},
         ];
         const tempDeck = [];
         
@@ -190,6 +190,11 @@ const handleCardShow = () => {
                         {
                             currentCard && (
                                 <div className='card active-card bg-indigo-400 shadow-md rounded-lg p-6 m-2 w-full md:w-1/2 lg:w-1/4 mx-auto'> 
+                                    <span className='text-5xl'>
+
+                                    {currentCard.cardImage}
+                                    </span>
+                                    
                                     {currentCard.cardName}
                                 </div>
                             )
